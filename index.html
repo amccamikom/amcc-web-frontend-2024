@@ -8,31 +8,36 @@
 </head>
 
 <body>
-    <!-- penerapan semantic html -->
+    <!-- penerapan semantic html: header -->
     <header>
-        <img src="images.jpeg" alt="">
-        <h1>Membuat Card Rental mobil</h1>
-        <p>Tambahkan card di bagian sini ya...</p>
+        <img src="images.jpeg" alt="Logo AMCC">
+        <h1>Membuat Card Rental Mobil</h1>
+        <p>Silakan tambahkan card untuk menampilkan informasi mobil rental pada bagian ini.</p>
     </header>
 
+    <!-- penerapan semantic html: main -->
     <main>
-        <h1>Isikan data mobil anda disini</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, vitae. Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Quod, earum!</p>
-        <form action="">
+        <h2>Isikan Data Mobil Anda</h2>
+        <p>Gunakan formulir di bawah ini untuk mengisi detail informasi mobil yang ingin Anda tambahkan.</p>
+
+        <!-- Penerapan Form -->
+        <form action="submit" method="post">
+
+            <!-- Penerapan input text -->
             <label for="text">Nama:</label> <br>
-            <input type="text"> <br> <br>
+            <input type="text" placeholder="Masukkan nama Anda"> <br> <br>
 
             <label for="text">Merk:</label> <br>
-            <input type="text"> <br> <br>
+            <input type="text" placeholder="Masukkan merk mobil"> <br> <br>
 
             <label for="text">Tahun:</label> <br>
-            <input type="text"> <br> <br>
+            <input type="text" placeholder="Masukkan tahun pembuatan mobil"> <br> <br>
 
-            <label for="text">Pilih File</label>
+            <label for="text">Unggah Foto Mobil:</label>
             <input type="file"> <br> <br>
 
-            <label for="dropdown">Pilih mobil</label>
+            <!-- penerapan select -->
+            <label for="dropdown">Pilih Mobil:</label>
             <select name="" id="">
                 <option value="1">Avanza</option>
                 <option value="2">Xenia</option>
@@ -41,19 +46,27 @@
             </select>
             <br> <br>
 
-            <label type="text">Pilih warna 1</label>
+            <!-- Penerapan checkbox -->
+            <p>Pilih warna yang tersedia:</p>
+            <label>Pilihan warna 1:</label>
             <input type="checkbox">
-            <label type="text">Pilih warna 2</label>
+            <label>Pilihan warna 2:</label>
             <input type="checkbox"> <br> <br>
 
-            <label type="text">Pilih body 1</label>
-            <input type="radio">
-            <label type="text">Pilih body 2</label>
-            <input type="radio"> <br> <br>
-            <button type="submit">Save</button>
-            <button type="Delete">Delete</button>
+            <!-- Penerapan radio -->
+            <p>Pilih jenis body mobil:</p>
+            <label>Body 1</label>
+            <input type="radio" name="body">
+            <label>Body 2</label>
+            <input type="radio" name="body"> <br> <br>
+
+            <!-- penerapan button -->
+            <button type="submit">Simpan</button>
+            <button type="reset">Hapus</button>
         </form>
     </main> <br>
+
+    <!-- penerapan semantic html: footer -->
     <footer>
         Terimakasih <br>
         <b>AMCC</b>
