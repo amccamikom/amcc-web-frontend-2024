@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* Membuat Style Umum */
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+  background-color: #ffffff;
+  color: #292929;
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+/* Membuat Style Header */
+header {
+  text-align: center;
+  color: #ffffff;
+  background: #3898ff;
+  padding: 16px;
+}
+
+header img {
+  max-width: 100%;
+  height: 200px;
+  width: 320px;
+  border-radius: 120px;
+  margin-bottom: 16px;
+}
+
+header p {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Mengakses Main Content Style */
+main {
+  padding: 32px;
+  background-color: #ffffff;
+  margin: 32px auto;
+  max-width: 800px;
+}
+
+main h2 {
+  font-size: 32px;
+  color: #3898ff;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+main p {
+  display: flex;
+  flex-direction: flex-between;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #292929;
+}
+
+/* Mengakses Form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Mengakses Label */
+label {
+  display: flex;
+  justify-content: flex-between;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ababab;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  color: #292929;
+  border-color: #ababab;
+  border-radius: 12px;
+}
+
+button {
+  width: 100%;
+  height: 48px;
+  padding: 16px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #3898ff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff0000;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+footer {
+  text-align: center;
+  background-color: #3898ff;
+  color: #ffffff;
+  padding: 16px;
+  margin-top: 32px;
+}
+
+footer b {
+  display: block;
+  margin-top: 9px;
+  font-size: 18px;
+}

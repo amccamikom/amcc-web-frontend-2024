@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Pertama Hari ini</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- ini adalah penerapan semantic html: header -->
+    <header>
+        <!-- <img src="mobil sedan.jpg" alt="ini adalah gambar mobil"> -->
+        <img src="https://www.otoflik.com/wp-content/uploads/2023/10/BMW-325i-E30.jpg" alt="">
+        <!-- <h1 style="color: rgb(0, 55, 255);">Membuat Card Rental Mobil</h1> -->
+        <p>Silahkan tambahkan card untuk menampilkan informasi mobil pada halaman ini</p>
+    </header>
+
+    <!-- ini adalah penerapan semantic html: main -->
+    <main>
+        <h2>Isikan Data Mobil Anda Disini</h2>
+        <p>Gunakan Formulir ini untuk mengisi detail informasi dari mobil anda</p>
+
+        <!-- ini adalah penerapan form -->
+        <form action="submit">
+            <label for="text">Nama Mobil:</label>
+            <input type="text" placeholder="masukan nama mobil anda"> <br><br>
+
+            <label for="text">Merk Mobil:</label>
+            <input type="text" placeholder="masukan merk mobil anda"><br><br>
+
+            <label for="text">Tahun Mobil:</label>
+            <input type="text" placeholder="masukan tahun mobil anda"><br><br>
+
+            <label for="text">Masukan File anda:</label>
+            <input type="file" placeholder="masukan file anda"> <br><br>
+
+            <!-- penerapan select -->
+            <label for="text">Pilih Mobil Kesukaan anda:</label>
+            <select name="opsi mobil" id="">
+                <option value="1">Avanza</option>
+                <option value="2">Sedan</option>
+                <option value="3">Pajero</option>
+                <option value="4">BMW</option>
+            </select> <br><br>
+
+            <!-- ini adalah penerapan radio button -->
+            <label for="text">Pilih salah 1 mobil saja</label>
+            <p><input type="radio" name="jenis mobil" value="mobil avanza">Avanza</p>
+            <p><input type="radio" name="jenis mobil" value="mobil avanza">BMW</p>
+
+            <!-- ini adalah penerapan checkbox -->
+            <label for="text">Kamu bisa milih mobil lebih dari 1</label>
+            <p><input type="checkbox" name="jenis mobil" value="mobil avanza">BMW</p>
+            <p><input type="checkbox" name="jenis mobil" value="mobil avanza">Avanza</p>
+            <p><input type="checkbox" name="jenis mobil" value="mobil avanza">Pajero</p>
+            <p><input type="checkbox" name="jenis mobil" value="mobil avanza">Sedan</p>
+
+            <!-- ini adalah penerapan button -->
+            <button type="submit">Simpan</button>
+            <button type="reset">Hapus</button>
+        </form>
+    </main>
+
+    <!-- ini adalah penerapan semantic html: footer -->
+    <footer>
+        Terimakasih <br>
+        <b>
+            Amcc 2024
+            Learning by Doing
+            Learning by Teaching
+        </b>
+    </footer>
+</body>
+
+</html>
