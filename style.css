@@ -186,6 +186,33 @@ footer {
   object-fit: cover;
 }
 
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* Label dengan position absolute */
+.image-label {
+  top: 10px;
+  left: 10px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 2; /* Memastikan label ada di atas gambar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Pastikan gambar tetap tampil dengan proporsi yang benar */
+.card-image-container .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .card-content {
   padding: 15px;
 }
