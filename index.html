@@ -9,15 +9,17 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <div>
             <div>
                 <div>
-                    <div>
+                    <div class="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center">
                     </div>
                     <a href="#">Rent.</a>
                 </div>
 
+                <!-- Navigation Links -->
                 <div>
                     <a href="#">Home</a>
                     <a href="#">Booking</a>
@@ -25,6 +27,7 @@
                     <a href="#">Help</a>
                 </div>
 
+                <!-- Location Section -->
                 <div>
                     <div>
                         <p>Your Location</p>
@@ -38,22 +41,33 @@
         </div>
     </nav>
 
-    <header>
+    <!-- Header Section with Background Image -->
+    <header class="min-h-screen rounded-t-3xl px-16 flex items-center relative"
+        style="background-image: url('/assets/background-image.png'); background-size: cover; background-position: center;">
         <div>
             <div>
-                <h1>Looking to save more on your rental car?</h1>
-                <p>Book longer durations for exclusive discounts, free upgrades, and loyalty rewards. Save more while
-                    enjoying quality transportation options.</p>
+                <div>
+                    <h1>Looking to save more on your rental car?</h1>
+                    <p>Book longer durations for exclusive discounts, free upgrades, and loyalty rewards. Save more
+                        while enjoying quality transportation options.</p>
+                </div>
+                <!-- Buttons -->
+                <div>
+                    <button>REGISTER</button>
+                    <button>LOGIN</button>
+                </div>
             </div>
             <div>
-                <button>REGISTER</button>
-                <button>LOGIN</button>
+                <img src="./assets/car1.png" alt="" class="w-[35rem]">
             </div>
         </div>
     </header>
 
-    <section>
+    <!-- Search Form Section -->
+    <section
+        class="mx-auto  bg-white rounded-2xl shadow-xl absolute left-1/2 transform -translate-x-1/2 -translate-y-16 p-8">
         <div>
+            <!-- Destination Input -->
             <div>
                 <label>Your Destination</label>
                 <div>
@@ -64,6 +78,7 @@
                 </div>
             </div>
 
+            <!-- Start Date Input -->
             <div>
                 <label>Start Rent</label>
                 <div>
@@ -73,6 +88,7 @@
                 </div>
             </div>
 
+            <!-- End Date Input -->
             <div>
                 <label>End Rent</label>
                 <div>
@@ -82,17 +98,19 @@
                 </div>
             </div>
 
+            <!-- Search Button -->
             <div>
                 <button>Cari</button>
             </div>
         </div>
     </section>
 
+    <!-- Car Listings Section -->
     <section>
         <h1>Start Your Adventures</h1>
         <!-- card container -->
         <div>
-            <!-- card -->
+            <!-- Car Card 1 -->
             <div>
                 <div>
                     <img src="assets/car.png" alt="Toyota Avanza" />
@@ -104,7 +122,7 @@
                     <p>Rp 320,000 <span>/day</span></p>
                 </div>
 
-                <div class="divider"></div>
+                <div class="border-t-2 border-blue-600 my-2"></div>
 
                 <div>
                     <div>
@@ -121,7 +139,9 @@
         </div>
     </section>
 
+    <!-- Available Cars Section -->
     <section>
+        <!-- header section -->
         <div>
             <h1>Available Now</h1>
             <div>
@@ -132,9 +152,9 @@
             </div>
         </div>
 
-        <!-- car listings -->
+        <!-- Car Listings -->
         <div>
-            <!-- card 1 -->
+            <!-- Car Card 1 -->
             <div>
                 <div>
                     <div>
@@ -162,8 +182,25 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div>
+            <div>
+                <div>
+                    <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+                    </div>
+                    <h2>Rent.</h2>
+                </div>
+                <div>
+                    <a href="#">Booking</a>
+                    <a href="#">Promo</a>
+                    <a href="#">Help</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
