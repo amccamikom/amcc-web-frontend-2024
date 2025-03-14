@@ -1,163 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-        <link rel="stylesheet" href="output.css" />
-        <title>Document</title>
-    </head>
-    <body>
-        <nav>
-            <ul>
-              <li>
-                <img src="assets/browse.png" alt="">
-                <p>Browse</p>
-              </li>
-              <li>
-                <img src="assets/booking.png" alt="">
-                <p>Booking</p>
-              </li>
-              <li>
-                <img src="assets/promo.png" alt="">
-                <p>Promo</p>
-              </li>
-              <li>
-                <img src="assets/help.png" alt="">
-                <p>Help</p>
-              </li>
-            </ul>
-          </nav>
-        <header>
-            <h1>Rent.com</h1>
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Building</a>
-                </li>
-                <li>
-                    <a href="">Promo</a>
-                </li>
-                <li>
-                    <a href="">Help</a>
-                </li>
-            </ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent. - Car Rental Service</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+    <nav>
+        <div>
             <div>
                 <div>
-                    <p>Your Location</p>
-                    <p>Indonesia</p>
+                    <div>
+                    </div>
+                    <a href="#">Rent.</a>
                 </div>
+
                 <div>
-                    <img src="assets/loc.png" alt="" />
+                    <a href="#">Home</a>
+                    <a href="#">Booking</a>
+                    <a href="#">Promo</a>
+                    <a href="#">Help</a>
+                </div>
+
+                <div>
+                    <div>
+                        <p>Your Location</p>
+                        <p>Indonesia</p>
+                    </div>
+                    <div>
+                        <img src="./assets/location-navbar.svg" alt="" />
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </nav>
 
-        <main>
-            <section>
-                <h1>Our Category</h1>
-                <ul>
-                    <li>
-                        <a href="">
-                            <img src="assets/cities.png" alt="" />
-                            Cities
-                        </a>
-                    </li>
+    <header>
+        <div>
+            <div>
+                <h1>Looking to save more on your rental car?</h1>
+                <p>Book longer durations for exclusive discounts, free upgrades, and loyalty rewards. Save more while
+                    enjoying quality transportation options.</p>
+            </div>
+            <div>
+                <button>REGISTER</button>
+                <button>LOGIN</button>
+            </div>
+        </div>
+    </header>
 
-                    <li>
-                        <a href="">
-                            <img src="assets/track.png" alt="" />
-                            Track
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                            <img src="assets/mount.png" alt="" />
-                            Mountain
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
-            <section>
-                <h1>Start Your Adventures</h1>
-                <!-- card container -->
+    <section>
+        <div>
+            <div>
+                <label>Your Destination</label>
                 <div>
-                    <!-- card -->
+                    <div>
+                        <img src="./assets/location.svg" alt="" />
+                        <input type="text" placeholder="Add Your Location" />
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label>Start Rent</label>
+                <div>
+                    <div>
+                        <input type="date" placeholder="MM/DD/YYYY" />
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label>End Rent</label>
+                <div>
+                    <div>
+                        <input type="date" placeholder="MM/DD/YYYY" />
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button>Cari</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>Start Your Adventures</h1>
+        <!-- card container -->
+        <div>
+            <!-- card -->
+            <div>
+                <div>
+                    <img src="assets/car.png" alt="Toyota Avanza" />
+                    <p>Popular</p>
+                </div>
+
+                <div>
+                    <h2>Toyota Avanza <span>(Black)</span></h2>
+                    <p>Rp 320,000 <span>/day</span></p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div>
+                    <div>
+                        <img src="assets/speed.svg" alt="Speed" />
+                        <p>250 kmh</p>
+                    </div>
+
+                    <div>
+                        <p>8</p>
+                        <img src="assets/seat.svg" alt="Seats" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h1>Available Now</h1>
+            <div>
+                <p>Filter</p>
+                <button>
+                    <img src="./assets/filter.svg" alt="" />
+                </button>
+            </div>
+        </div>
+
+        <!-- car listings -->
+        <div>
+            <!-- card 1 -->
+            <div>
+                <div>
+                    <div>
+                        <p>3/5</p>
+                        <img src="./assets/star.svg" alt="" />
+                    </div>
+                    <img src="./assets/car.png" alt="Toyota Avanza" />
+                </div>
+
+                <div>
+                    <h2>Toyota Avanza <span>(Black)</span></h2>
+                    <p>Rp 320,000 <span>/day</span></p>
+
                     <div>
                         <div>
-                            <img src="assets/car.png" alt="" />
-                            <p>Popular</p>
+                            <img src="./assets/location.svg" alt="" />
+                            <span>Yogyakarta</span>
                         </div>
 
                         <div>
-                            <h2>Toyota Avanza <span>(Black)</span></h2>
-                            <p>Rp. 320.000 <span>/day</span></p>
-                        </div>
-
-                        <div class="divider"></div>
-
-                        <div>
-                            <div>
-                                <img src="assets/speed.png" alt="" />
-                                <p>250 kmh</p>
-                            </div>
-
-                            <div>
-                                <p>8</p>
-                                <img src="assets/seat.png" alt="" />
-                            </div>
+                            <span>8</span>
+                            <img src="./assets/seat.svg" alt="" />
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
 
-            <section>
-                <div>
-                    <h1>Avalable Now</h1>
-                    <div>
-                        <p>Filter</p>
-                        <div>
-                            <img src="assets/filter.png" alt="" class="" />
-                        </div>
-                    </div>
-                </div>
+    </section>
+</body>
 
-                <!-- card container -->
-                <div>
-                    <!-- card -->
-                    <div>
-                        <div>
-                            <img src="assets/car.png" alt="" />
-                            <p>Popular</p>
-                        </div>
-
-                        <div>
-                            <div>
-                                <h2>Toyota Avanza <span>(Black)</span></h2>
-                                <p>Rp. 320.000 <span>/day</span></p>
-                            </div>
-
-                            <div class="divider"></div>
-
-                            <div>
-                                <div>
-                                    <img src="assets/speed.png" alt="" />
-                                    <p>250 kmh</p>
-                                </div>
-
-                                <div>
-                                    <p>8</p>
-                                    <img src="assets/seat.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </body>
 </html>
