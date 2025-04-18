@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent. - Car Rental Service</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-white">
+    <nav class="bg-white">
+        <div class="w-full mx-auto px-16">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center">
+                    </div>
+                    <a href="#" class="text-black font-bold text-3xl px-2">Rent.</a>
+                </div>
+
+                <div class="flex items-center space-x-8">
+                    <a href="#"
+                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">Home</a>
+                    <a href="#"
+                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">Booking</a>
+                    <a href="#"
+                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">Promo</a>
+                    <a href="#"
+                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">Help</a>
+                </div>
+
+                <div class="flex items-center">
+                    <div>
+                        <p class="text-black font-semibold">Your Location</p>
+                        <p class="text-blue-600 font-semibold text-xl">Indonesia</p>
+                    </div>
+                    <div class="ml-2">
+                        <img src="./assets/location-navbar.svg" alt="" class="w-16">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="min-h-screen rounded-t-3xl px-16 flex items-center relative"
+        style="background-image: url('/assets/background-image.png'); background-size: cover; background-position: center;">
+        <div class="space-y-8 flex items-center justify-between w-full">
+            <div class="space-y-4">
+                <div class="space-y-2 max-w-xl">
+                    <h1 class="text-white text-5xl font-bold leading-tight">Looking to save more on<br>your rental car?
+                    </h1>
+                    <p class="text-white text-lg opacity-90">Book longer durations for exclusive discounts, free
+                        upgrades,
+                        and loyalty rewards. Save more while enjoying quality transportation options.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button
+                        class="border-2 px-10 py-3 border-white rounded-xl text-white font-bold text-lg hover:bg-white hover:text-blue-600 transition duration-300">
+                        REGISTER
+                    </button>
+                    <button
+                        class="border-2 px-10 py-3 border-white rounded-xl text-blue-600 font-bold text-lg bg-white transition duration-300">
+                        LOGIN
+                    </button>
+                </div>
+            </div>
+            <div>
+                <img src="./assets/car1.png" alt="" class="w-[35rem]">
+            </div>
+        </div>
+    </header>
+
+    <div
+        class="mx-auto  bg-white rounded-2xl shadow-xl absolute left-1/2 transform -translate-x-1/2 -translate-y-16 p-8">
+        <div class="flex items-center space-x-6">
+            <div>
+                <label class="text-gray-800 font-semibold mb-2">Your Destination</label>
+                <div class="relative">
+                    <div class="flex items-center border border-gray-300 rounded-xl px-5">
+                        <img src="./assets/location.svg" alt="ini adalah icon lokasi" class="w-6 h-6">
+                        <input type="text" placeholder="Add Your Location" class="px-2 py-3 outline-none" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Date Field -->
+            <div>
+                <label class="text-gray-800 font-semibold mb-2">Start Rent</label>
+                <div class="relative">
+                    <div class="flex items-center border border-gray-300 rounded-xl">
+                        <input type="date" placeholder="MM/DD/YYYY" class="flex-grow px-5 py-3 outline-none" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Date Field -->
+            <div>
+                <label class="text-gray-800 font-semibold mb-2">End Rent</label>
+                <div class="relative">
+                    <div class="flex items-center border border-gray-300 rounded-xl">
+                        <input type="date" placeholder="MM/DD/YYYY" class="flex-grow px-5 py-3 outline-none" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Button -->
+            <div class="flex pt-6">
+                <button
+                    class="bg-green-500 text-white px-10 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-lg">
+                    Cari
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section class="p-6 bg-white py-28 px-16 mx-auto">
+        <h1 class="text-2xl font-bold mb-6">Start Your Adventures</h1>
+        <!-- card container -->
+        <div class="flex justify-between gap-4">
+            <!-- card -->
+            <div class="bg-white rounded-xl shadow-lg w-full p-3">
+                <div class="relative">
+                    <img src="assets/car.png" alt="Toyota Avanza" class="w-full h-48" />
+                    <p class="absolute top-2 left-2 bg-yellow-400 text-black font-medium px-8 py-1 rounded-full">Popular
+                    </p>
+                </div>
+
+                <div class="p-4">
+                    <h2 class="text-blue-600 text-xl font-bold">Toyota Avanza <span
+                            class="text-blue-600 font-medium text-sm">(Black)</span></h2>
+                    <p class="font-semibold mt-1">Rp 320,000 <span class="text-gray-500 font-normal">/day</span></p>
+                </div>
+
+                <div class="border-t-2 border-blue-600 my-2"></div>
+
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/speed.svg" alt="Speed" class="w-6 h-6" />
+                        <p class="text-gray-700">250 kmh</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <p class="text-gray-700">8</p>
+                        <img src="assets/seat.svg" alt="Seats" class="w-6 h-6" />
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg w-full p-3">
+                <div class="relative">
+                    <img src="assets/car.png" alt="Toyota Avanza" class="w-full h-48" />
+                    <p class="absolute top-2 left-2 bg-yellow-400 text-black font-medium px-8 py-1 rounded-full">Popular
+                    </p>
+                </div>
+
+                <div class="p-4">
+                    <h2 class="text-blue-600 text-xl font-bold">Toyota Avanza <span
+                            class="text-blue-600 font-medium text-sm">(Black)</span></h2>
+                    <p class="font-semibold mt-1">Rp 320,000 <span class="text-gray-500 font-normal">/day</span></p>
+                </div>
+
+                <div class="border-t-2 border-blue-600 my-2"></div>
+
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/speed.svg" alt="Speed" class="w-6 h-6" />
+                        <p class="text-gray-700">250 kmh</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <p class="text-gray-700">8</p>
+                        <img src="assets/seat.svg" alt="Seats" class="w-6 h-6" />
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg w-full p-3">
+                <div class="relative">
+                    <img src="assets/car.png" alt="Toyota Avanza" class="w-full h-48" />
+                    <p class="absolute top-2 left-2 bg-yellow-400 text-black font-medium px-8 py-1 rounded-full">Popular
+                    </p>
+                </div>
+
+                <div class="p-4">
+                    <h2 class="text-blue-600 text-xl font-bold">Toyota Avanza <span
+                            class="text-blue-600 font-medium text-sm">(Black)</span></h2>
+                    <p class="font-semibold mt-1">Rp 320,000 <span class="text-gray-500 font-normal">/day</span></p>
+                </div>
+
+                <div class="border-t-2 border-blue-600 my-2"></div>
+
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/speed.svg" alt="Speed" class="w-6 h-6" />
+                        <p class="text-gray-700">250 kmh</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <p class="text-gray-700">8</p>
+                        <img src="assets/seat.svg" alt="Seats" class="w-6 h-6" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="p-4 bg-white min-h-screen px-16 ">
+        <!-- Header Section -->
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold">Available Now</h1>
+            <div class="flex gap-4 items-center">
+                <h1 class="font-reguler text-lg">Filter</h1>
+                <button class="gap-2 px-4 py-4 bg-white rounded-lg shadow-md">
+                    <img src="./assets/filter.svg" alt="" class="w-4 h-4">
+                </button>
+            </div>
+        </div>
+
+        <!-- Car Listings -->
+        <div class="flex flex-col gap-4">
+            <!-- Car Card 1 -->
+            <div class="bg-white rounded-xl shadow p-4 flex items-center">
+                <div class="relative w-32 h-24">
+                    <div
+                        class="absolute top-0 left-0 bg-yellow-400 text-black text-xs font-medium px-2 py-1 rounded-tl-xl rounded-br-xl flex items-center gap-1">
+                        3/5
+                        <img src="./assets/star.svg" alt="" class="w-3 h-3">
+                    </div>
+                    <img src="./assets/car.png" alt="Toyota Avanza" class="w-full h-full object-contain" />
+                </div>
+
+                <div class="ml-4 flex-grow">
+                    <h2 class="text-blue-600 font-bold">Toyota Avanza <span
+                            class="text-gray-500 font-normal text-sm">(Black)</span></h2>
+                    <p class="font-semibold">Rp 320,000 <span class="text-gray-500 font-normal text-sm">/day</span></p>
+
+                    <div class="flex justify-between items-center mt-2">
+                        <div class="flex items-center gap-1">
+                            <img src="./assets/location.svg" alt="" class="w-6 h-6">
+                            <span class="text-sm">Yogyakarta</span>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <span class="text-sm font-medium">8</span>
+                            <img src="./assets/seat.svg" alt="" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Card 2 -->
+            <div class="bg-white rounded-xl shadow p-4 flex items-center">
+                <div class="relative w-32 h-24">
+                    <div
+                        class="absolute top-0 left-0 bg-yellow-400 text-black text-xs font-medium px-2 py-1 rounded-tl-xl rounded-br-xl flex items-center gap-1">
+                        3/5
+                        <img src="./assets/star.svg" alt="" class="w-3 h-3">
+                    </div>
+                    <img src="assets/car.png" alt="Toyota Avanza" class="w-full h-full object-contain" />
+                </div>
+
+                <div class="ml-4 flex-grow">
+                    <h2 class="text-blue-600 font-bold">Toyota Avanza <span
+                            class="text-gray-500 font-normal text-sm">(Black)</span></h2>
+                    <p class="font-semibold">Rp 320,000 <span class="text-gray-500 font-normal text-sm">/day</span></p>
+
+                    <div class="flex justify-between items-center mt-2">
+                        <div class="flex items-center gap-1">
+                            <img src="./assets/location.svg" alt="" class="w-6 h-6">
+                            <span class="text-sm">Magelang</span>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <span class="text-sm font-medium">8</span>
+                            <img src="./assets/seat.svg" alt="" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Card 3 -->
+            <div class="bg-white rounded-xl shadow p-4 flex items-center">
+                <div class="relative w-32 h-24">
+                    <div
+                        class="absolute top-0 left-0 bg-yellow-400 text-black text-xs font-medium px-2 py-1 rounded-tl-xl rounded-br-xl flex items-center gap-1">
+                        3/5
+                        <img src="./assets/star.svg" alt="" class="w-3 h-3">
+                    </div>
+                    <img src="assets/car.png" alt="Toyota Avanza" class="w-full h-full object-contain" />
+                </div>
+
+                <div class="ml-4 flex-grow">
+                    <h2 class="text-blue-600 font-bold">Toyota Avanza <span
+                            class="text-gray-500 font-normal text-sm">(Black)</span></h2>
+                    <p class="font-semibold">Rp 320,000 <span class="text-gray-500 font-normal text-sm">/day</span></p>
+
+                    <div class="flex justify-between items-center mt-2">
+                        <div class="flex items-center gap-1">
+                            <img src="./assets/location.svg" alt="" class="w-6 h-6">
+                            <span class="text-sm">Bantul</span>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <span class="text-sm font-medium">8</span>
+                            <img src="./assets/seat.svg" alt="" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-blue-600 rounded-t-3xl text-white py-8 px-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+                    </div>
+                    <h2 class="text-2xl font-bold">Rent.</h2>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="hover:text-black">Booking</a>
+                    <a href="#" class="hover:text-black">Promo</a>
+                    <a href="#" class="hover:text-black">Help</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
