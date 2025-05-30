@@ -1,0 +1,15 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i src/css/input.css -o src/css/output.css --watch"
+  },
+  "author": "mastay",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.13",
+    "tailwindcss": "^4.0.13"
+  }
+}
