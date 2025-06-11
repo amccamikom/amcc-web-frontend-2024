@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer components {
+    .title {
+        @apply text-2xl font-bold;
+    }
+
+    .card {
+        @apply bg-white rounded-xl shadow-lg w-fit md:w-full p-3 md:shrink shrink-0 md:block inline-block
+    }
+}
