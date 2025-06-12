@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>Booking Success</title>
+</head>
+
+<body class="bg-white">
+    <!-- Desktop/Tablet Navigation -->
+    <nav class="bg-white hidden md:block">
+        <div class="w-full mx-auto px-8 md:px-16">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-600 hidden md:flex items-center justify-center">
+                    </div>
+                    <a href="index.html" class="text-black font-bold text-3xl px-2">Rent.</a>
+                </div>
+
+                <div class="flex items-center space-x-8 justify-center z-10 rounded-t-2xl py-3 px-3">
+                    <a href="index.html" class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
+                        <img class="m-auto hidden" src="assets/browse.png" alt="">
+                        <p class="pt-1 hover:text-black text-gray-500">Browse</p>
+                    </a>
+                    <a href="#" class="py-4 px-2 text-black font-semibold transition duration-300">
+                        <img class="m-auto hidden" src="assets/booking.png" alt="">
+                        <p class="pt-1">Booking</p>
+                    </a>
+                    <a href="#" class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
+                        <img class="m-auto hidden" src="assets/promo.png" alt="">
+                        <p class="pt-1 hover:text-black text-gray-500">Promo</p>
+                    </a>
+                    <a href="#" class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
+                        <img class="m-auto hidden" src="assets/help.png" alt="">
+                        <p class="pt-1 hover:text-black text-gray-500">Help</p>
+                    </a>
+                </div>
+
+                <div class="flex items-center">
+                    <div>
+                        <p class="text-black font-semibold">Your Location</p>
+                        <p class="text-blue-600 font-semibold text-xl">Indonesia</p>
+                    </div>
+                    <div class="ml-2">
+                        <img src="./assets/location-navbar.svg" alt="" class="w-16">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container with Background -->
+    <div class="bg-white min-h-screen">
+        <nav class="bg-white p-4 w-full">
+            <div class="flex items-center relative max-w-4xl mx-auto">
+                <a href="booking.html"
+                    class="flex items-center justify-center rounded-full bg-blue-100 p-3 absolute left-4 md:left-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </a>
+
+                <div class="flex flex-col items-center w-full md:items-start md:ml-16 lg:ml-24">
+                    <span class="text-blue-600 text-sm">Start</span>
+                    <h1 class="font-bold text-lg">Booking Car</h1>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Success Content -->
+        <div class="max-w-4xl mx-auto px-4 md:px-8 pt-8 pb-20">
+            <!-- White Content Area -->
+            <div class="bg-white rounded-2xl p-6 md:p-10 shadow-md mt-4 text-center">
+                <h1 class="text-2xl md:text-3xl font-bold">Booking Is Finished,</h1>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">Congratulation</h2>
+
+                <!-- Car Image -->
+                <div class="my-6 md:my-10">
+                    <img src="./assets/car1.png" alt="Toyota Avanza" class="w-full max-w-xs mx-auto">
+                </div>
+
+                <!-- Transaction Details -->
+                <p class="text-sm md:text-base mb-8 px-4 max-w-md mx-auto">
+                    Gunakan booking id transaction berikut untuk memeriksa kendaraan yang sudah kamu booking.
+                </p>
+
+                <!-- Booking ID -->
+                <div class="relative max-w-xs mx-auto mb-10">
+                    <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <input type="text" value="MB11384BH1S" readonly
+                        class="w-full p-4 pl-12 rounded-full border border-gray-300 focus:outline-none text-center font-semibold bg-gray-50">
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="space-y-4 max-w-xs mx-auto">
+                    <a href="index.html" class="block w-full">
+                        <button
+                            class="w-full bg-gray-300 hover:bg-gray-400 text-black font-bold py-4 px-6 rounded-full transition duration-300 cursor-pointer">
+                            Explore Again
+                        </button>
+                    </a>
+                    <button
+                        class="w-full bg-black hover:bg-gray-800 text-white font-bold py-4 px-6 rounded-full transition duration-300 cursor-pointer">
+                        <a href="listing-car.html">
+                            Check My Booking
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

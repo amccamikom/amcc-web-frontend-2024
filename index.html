@@ -18,24 +18,21 @@
                     <a href="#" class="text-black font-bold text-3xl px-2">Rent.</a>
                 </div>
 
-                <div class="flex items-center space-x-8 justify-center md:static fixed left-0 bottom-0 w-full bg-blue-600 md:bg-white z-10 rounded-t-2xl py-3 px-3">
-                    <a href="#"
-                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
+                <div
+                    class="flex items-center space-x-8 justify-center md:static fixed left-0 bottom-0 w-full bg-blue-600 md:bg-white z-10 rounded-t-2xl py-3 px-3">
+                    <a href="index.html" class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
                         <img class="m-auto block md:hidden" src="assets/browse.png" alt="">
                         <p class="pt-1 hover:text-black text-white md:text-gray-500">Browse</p>
                     </a>
-                    <a href="#"
-                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
+                    <a href="#" class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
                         <img class="m-auto block md:hidden" src="assets/booking.png" alt="">
                         <p class="pt-1 hover:text-black text-white md:text-gray-500">Booking</p>
                     </a>
-                    <a href="#"
-                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
+                    <a href="#" class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
                         <img class="m-auto block md:hidden" src="assets/promo.png" alt="">
                         <p class="pt-1 hover:text-black text-white md:text-gray-500">Promo</p>
                     </a>
-                    <a href="#"
-                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
+                    <a href="#" class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
                         <img class="m-auto block md:hidden" src="assets/help.png" alt="">
                         <p class="pt-1 hover:text-black text-white md:text-gray-500">Help</p>
                     </a>
@@ -59,9 +56,12 @@
         <div class="space-y-8 flex items-center justify-center md:justify-between w-full">
             <div class="space-y-4">
                 <div class="space-y-2 max-w-xl">
-                    <h1 class="text-white text-3xl md:text-5xl font-normal md:font-bold leading-tight text-center md:text-left">Looking to save more on<br>your rental car?
+                    <h1
+                        class="text-white text-3xl md:text-5xl font-normal md:font-bold leading-tight text-center md:text-left">
+                        Looking to save more on<br>your rental car?
                     </h1>
-                    <p class="text-white text-lg opacity-90 hidden md:block">Book longer durations for exclusive discounts, free
+                    <p class="text-white text-lg opacity-90 hidden md:block">Book longer durations for exclusive
+                        discounts, free
                         upgrades,
                         and loyalty rewards. Save more while enjoying quality transportation options.</p>
                 </div>
@@ -84,46 +84,47 @@
 
     <div
         class="mx-auto w-[90%] bg-white rounded-2xl shadow-xl absolute left-1/2 transform -translate-x-1/2 -translate-y-48 md:-translate-y-16 p-8">
-        <div class="flex flex-col md:flex-row items-center space-x-6 gap-3">
+        <div class="flex flex-col md:flex-row items-center md:items-end space-y-4 md:space-y-0 md:space-x-6 gap-3">
             <div class="w-full mx-auto">
-                <label class="text-gray-800 font-semibold mb-2">Your Destination</label>
+                <label class="text-gray-800 font-semibold mb-2 block">Your Destination</label>
                 <div class="relative">
                     <div class="flex items-center border border-gray-300 rounded-xl px-5">
                         <img src="./assets/location.svg" alt="ini adalah icon lokasi" class="w-6 h-6">
-                        <input type="text" placeholder="Add Your Location" class="px-2 py-3 outline-none" />
+                        <input type="text" placeholder="Add Your Location" class="px-2 py-3 outline-none w-full" />
                     </div>
                 </div>
             </div>
 
             <!-- Start Date Field -->
             <div class="w-full mx-auto">
-                <label class="text-gray-800 font-semibold mb-2">Start Rent</label>
+                <label class="text-gray-800 font-semibold mb-2 block">Start Rent</label>
                 <div class="relative">
                     <div class="flex items-center border border-gray-300 rounded-xl">
-                        <input type="date" placeholder="MM/DD/YYYY" class="flex-grow px-5 py-3 outline-none" />
+                        <input type="date" placeholder="MM/DD/YYYY" class="flex-grow px-5 py-3 outline-none w-full" />
                     </div>
                 </div>
             </div>
 
             <!-- End Date Field -->
             <div class="w-full mx-auto">
-                <label class="text-gray-800 font-semibold mb-2">End Rent</label>
+                <label class="text-gray-800 font-semibold mb-2 block">End Rent</label>
                 <div class="relative">
                     <div class="flex items-center border border-gray-300 rounded-xl">
-                        <input type="date" placeholder="MM/DD/YYYY" class="flex-grow px-5 py-3 outline-none" />
+                        <input type="date" placeholder="MM/DD/YYYY" class="flex-grow px-5 py-3 outline-none w-full" />
                     </div>
                 </div>
             </div>
 
             <!-- Search Button -->
-            <div class="flex pt-6">
+            <div class="w-full flex lg:w-auto">
                 <button
-                    class="bg-green-500 text-white px-10 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-lg">
+                    class="bg-green-500 text-white px-8 lg:px-10 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-lg w-full">
                     Cari
                 </button>
             </div>
         </div>
     </div>
+
     <section class="p-6 bg-white py-28 px-8 md:px-16 mx-auto mt-28">
         <h1 class="title mb-6">Start Your Adventures</h1>
         <!-- card container -->
@@ -147,7 +148,7 @@
         <!-- Car Listings -->
         <div class="flex flex-col gap-4 available-card-container">
             <!-- Car Card 1 -->
-            
+
         </div>
     </div>
     <footer class="bg-blue-600 rounded-t-3xl text-white py-8 px-16">
