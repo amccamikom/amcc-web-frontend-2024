@@ -1,54 +1,39 @@
-// Mendapatkan ID mobil dari URL
-function getCarIdFromUrl() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('id');
-}
-
 // Memuat detail mobil untuk booking
 async function loadCarForBooking() {
-    const carId = getCarIdFromUrl();
+    const urlParams = new URLSearchParams(window.location.search);
+    const carId = urlParams.get('id');
 
     if (!carId) {
-        alert('ID mobil tidak ditemukan. Kembali ke halaman utama.');
+        alert('ID mobil tidak ditemukan');
         window.location.href = 'index.html';
         return;
     }
 
     try {
         const data = await postData('/cars', { id: parseInt(carId) });
-        if (!data || !data.data) {
-            throw new Error('Struktur data mobil tidak valid');
-        }
-
         const car = data.data;
+        if (!car) throw new Error('Data mobil tidak valid');
 
-        // Simpan detail mobil di form dan localStorage
+        // Simpan detail mobil
         const bookingForm = document.querySelector('form');
-        if (bookingForm) {
-            bookingForm.setAttribute('data-car-id', car.id);
-        }
+        if (bookingForm) bookingForm.setAttribute('data-car-id', car.id);
+        
         localStorage.setItem('booked_car_id', car.id);
         localStorage.setItem('booked_car_name', car.name);
         localStorage.setItem('booked_car_price', car.price);
         localStorage.setItem('booked_car_image', car.image || './assets/car1.png');
 
-        // Tampilkan data mobil di halaman booking
-        updateCarDetailsOnBookingPage(car);
-
+        // Update UI
+        const carCard = document.querySelector('.bg-white.rounded-2xl.border');
+        if (carCard) {
+            carCard.querySelector('img').src = car.image || './assets/car1.png';
+            carCard.querySelector('img').alt = car.name;
+            carCard.querySelector('h2').innerHTML = `${car.name} <span class="text-xs md:text-sm font-medium">(${car.color || 'Black'})</span>`;
+            carCard.querySelector('.font-bold.text-blue-600').innerHTML = `Rp ${car.price.toLocaleString('id-ID')} <span class="text-gray-500 text-xs md:text-sm font-normal">/day</span>`;
+        }
     } catch (error) {
-        alert('Gagal memuat data mobil. Silakan coba lagi nanti.');
+        alert('Gagal memuat data mobil');
     }
-}
-
-// Update tampilan detail mobil
-function updateCarDetailsOnBookingPage(car) {
-    const carCard = document.querySelector('.bg-white.rounded-2xl.border');
-    if (!carCard) return;
-
-    carCard.querySelector('img').src = car.image || './assets/car1.png';
-    carCard.querySelector('img').alt = car.name;
-    carCard.querySelector('h2').innerHTML = `${car.name} <span class="text-xs md:text-sm font-medium">(${car.color || 'Black'})</span>`;
-    carCard.querySelector('.font-bold.text-blue-600').innerHTML = `Rp ${car.price.toLocaleString('id-ID')} <span class="text-gray-500 text-xs md:text-sm font-normal">/day</span>`;
 }
 
 // Proses booking
@@ -70,7 +55,7 @@ async function bookCar(event) {
 
     // Validate form
     if (!duration || !bookingDate || !fullName || !email || !phone) {
-        alert('Mohon isi semua field yang diperlukan.');
+        alert('Mohon isi semua field');
         submitButton.disabled = false;
         submitButton.innerHTML = 'Continue Booking <svg>...</svg>';
         return;
@@ -86,63 +71,33 @@ async function bookCar(event) {
             phone: phone
         };
         
-        // Generate a booking ID if API fails
-        const generateBookingId = () => {
-            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-            let result = 'MB';
-            for (let i = 0; i < 8; i++) {
-                result += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            return result;
-        };
+        // Generate booking ID
+        const generateId = () => 'MB' + Math.random().toString(36).substring(2, 10).toUpperCase();
         
+        // Try API booking
         try {
             const response = await postData('/bookings', bookingData);
+            const bookingId = response.data?.id || response.id || (typeof response.data === 'string' ? response.data : null);
             
-            if (response && response.data) {
-                let bookingId;
-                
-                if (typeof response.data === 'object' && response.data.id) {
-                    bookingId = response.data.id;
-                } else if (typeof response.data === 'string') {
-                    bookingId = response.data;
-                } else if (response.id) {
-                    bookingId = response.id;
-                }
-                
-                if (bookingId) {
-                    // Save booking info to localStorage
-                    localStorage.setItem('booking_id', bookingId);
-                    localStorage.setItem('user_email', email);
-                    localStorage.setItem('booking_phone', phone);
-                    localStorage.setItem('booking_name', fullName);
-                    localStorage.setItem('booking_duration', duration);
-                    localStorage.setItem('booking_date', bookingDate);
-                    
-                    window.location.href = 'booking-success.html';
-                    return;
-                }
-            }
+            if (!bookingId) throw new Error('Invalid booking ID');
             
-            throw new Error('Booking ID tidak diterima dari server');
-            
-        } catch (apiError) {
-            // Use local booking ID as fallback
-            const localBookingId = generateBookingId();
-            
-            localStorage.setItem('booking_id', localBookingId);
-            localStorage.setItem('user_email', email);
-            localStorage.setItem('booking_phone', phone);
-            localStorage.setItem('booking_name', fullName);
-            localStorage.setItem('booking_duration', duration);
-            localStorage.setItem('booking_date', bookingDate);
-            localStorage.setItem('booked_car_id', carId);
-            
-            window.location.href = 'booking-success.html';
+            localStorage.setItem('booking_id', bookingId);
+        } catch {
+            // Fallback to local ID
+            localStorage.setItem('booking_id', generateId());
         }
         
+        // Save common booking data
+        localStorage.setItem('user_email', email);
+        localStorage.setItem('booking_phone', phone);
+        localStorage.setItem('booking_name', fullName);
+        localStorage.setItem('booking_duration', duration);
+        localStorage.setItem('booking_date', bookingDate);
+        localStorage.setItem('booked_car_id', carId);
+        
+        window.location.href = 'booking-success.html';
     } catch (error) {
-        alert(`Booking gagal: ${error.message}`);
+        alert('Booking gagal');
         submitButton.disabled = false;
         submitButton.innerHTML = 'Continue Booking <svg>...</svg>';
     }
@@ -151,9 +106,6 @@ async function bookCar(event) {
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
     loadCarForBooking();
-
     const bookingForm = document.querySelector('form');
-    if (bookingForm) {
-        bookingForm.addEventListener('submit', bookCar);
-    }
+    if (bookingForm) bookingForm.addEventListener('submit', bookCar);
 });
