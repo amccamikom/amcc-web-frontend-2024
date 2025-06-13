@@ -20,7 +20,8 @@
 
                 <div
                     class="flex items-center space-x-8 justify-center md:static fixed left-0 bottom-0 w-full bg-blue-600 md:bg-white z-10 rounded-t-2xl py-3 px-3">
-                    <a href="index.html" class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
+                    <a href="index.html"
+                        class="py-4 px-2 text-gray-400 font-semibold hover:text-black transition duration-300">
                         <img class="m-auto block md:hidden" src="assets/browse.png" alt="">
                         <p class="pt-1 hover:text-black text-white md:text-gray-500">Browse</p>
                     </a>
@@ -55,7 +56,7 @@
         style="background-image: url('/assets/background-image.png'); background-size: cover; background-position: center;">
         <div class="space-y-8 flex items-center justify-center md:justify-between w-full">
             <div class="space-y-4">
-                <div class="space-y-2 max-w-xl">
+                <div class="space-y-2 max-w-2xl">
                     <h1
                         class="text-white text-3xl md:text-5xl font-normal md:font-bold leading-tight text-center md:text-left">
                         Looking to save more on<br>your rental car?
@@ -90,7 +91,8 @@
                 <div class="relative">
                     <div class="flex items-center border border-gray-300 rounded-xl px-5">
                         <img src="./assets/location.svg" alt="ini adalah icon lokasi" class="w-6 h-6">
-                        <input type="text" placeholder="Add Your Location" class="px-2 py-3 outline-none w-full" />
+                        <input id="location-search-input" type="text" placeholder="Add Your Location"
+                            class="px-2 py-3 outline-none w-full" />
                     </div>
                 </div>
             </div>
@@ -117,8 +119,8 @@
 
             <!-- Search Button -->
             <div class="w-full flex lg:w-auto">
-                <button
-                    class="bg-green-500 text-white px-8 lg:px-10 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold text-lg w-full">
+                <button id="search-cars-button"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg">
                     Cari
                 </button>
             </div>
@@ -128,7 +130,7 @@
     <section class="p-6 bg-white py-28 px-8 md:px-16 mx-auto mt-28">
         <h1 class="title mb-6">Start Your Adventures</h1>
         <!-- card container -->
-        <div class="flex justify-start md:justify-between gap-4 overflow-x-auto popular-card-container">
+        <div class="grid grid-cols-3 justify-start md:justify-between gap-4 popular-card-container">
             <!-- card -->
         </div>
     </section>
@@ -168,8 +170,8 @@
         </div>
     </footer>
 
-    <script src="src/js/data.js"></script>
-    <script src="src/js/script.js"></script>
+    <script src="src/js/api.js"></script>
+    <script src="src/js/carList.js"></script>
 </body>
 
 </html>
