@@ -2,6 +2,7 @@
 function displayBookingSuccessInfo() {
     const bookingId = localStorage.getItem('booking_id');
     const carImage = localStorage.getItem('booked_car_image');
+    const userPhone = localStorage.getItem('booking_phone');
 
     // Tampilkan ID booking
     const bookingIdInput = document.querySelector('input[readonly]');
@@ -9,42 +10,34 @@ function displayBookingSuccessInfo() {
         bookingIdInput.value = bookingId || 'ID tidak ditemukan';
     }
 
+    // Tampilkan error jika tidak ada booking ID
     if (!bookingId) {
         const contentArea = document.querySelector('.bg-white.rounded-2xl.p-6') || 
-                            document.querySelector('main') ||
+                            document.querySelector('main') || 
                             document.body;
         
         contentArea.innerHTML = `
-            <h1 class="text-2xl md:text-3xl font-bold text-red-500">Terjadi Kesalahan</h1>
-            <p class="mt-4">ID booking tidak ditemukan. Silakan coba lagi.</p>
-            <div class="mt-8">
-                <a href="index.html" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg text-center font-medium">
-                    Kembali ke Beranda
-                </a>
-            </div>
+            <h1 class="text-2xl font-bold text-red-500">Terjadi Kesalahan</h1>
+            <p class="mt-4">ID booking tidak ditemukan.</p>
+            <a href="index.html" class="mt-8 block bg-blue-600 text-white py-3 px-6 rounded-lg text-center">
+                Kembali ke Beranda
+            </a>
         `;
         return;
     }
 
-    // Tampilkan gambar mobil yang dibooking
+    // Tampilkan gambar mobil
     const carImageElement = document.querySelector('img[alt="Toyota Avanza"]') || 
-                           document.querySelector('main img') ||
-                           document.querySelector('img');
+                           document.querySelector('main img');
                            
     if (carImageElement && carImage) {
         carImageElement.src = carImage;
     }
 
+    // Update link ke halaman listing
     const checkBookingLink = document.querySelector('a[href="listing-car.html"]');
-    
-    if (checkBookingLink) {
-        const userPhone = localStorage.getItem('booking_phone');
-        
-        if (userPhone && bookingId) {
-            checkBookingLink.href = `listing-car.html?phone=${encodeURIComponent(userPhone)}&booking_id=${encodeURIComponent(bookingId)}`;
-        } else if (userPhone) {
-            checkBookingLink.href = `listing-car.html?phone=${encodeURIComponent(userPhone)}`;
-        }
+    if (checkBookingLink && userPhone) {
+        checkBookingLink.href = `listing-car.html?phone=${encodeURIComponent(userPhone)}&booking_id=${encodeURIComponent(bookingId)}`;
     }
 }
 
