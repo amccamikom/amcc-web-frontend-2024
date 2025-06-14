@@ -86,10 +86,77 @@ const createAvailableCarCard = (car) => {
 };
 
 // Load mobil populer
+async function loadPopularCars() {
+  try {
+    const data = await getData("/cars/popular");
+    const popularContainer = document.querySelector(".popular-card-container");
 
+    if (!popularContainer) return;
 
+    popularContainer.innerHTML = `<div class="text-gray-500 text-sm text-center py-8">Loading popular cars...</div>`;
+
+    const carData =
+      data.data && Array.isArray(data.data)
+        ? data.data
+        : Array.isArray(data)
+        ? data
+        : [];
+
+    if (carData.length > 0) {
+      let gridHTML = `<div class="justify-center gap-4 py-10 grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3">`;
+
+      carData.forEach((car) => {
+        gridHTML += createPopularCarCard(car);
+      });
+
+      gridHTML += `</div>`;
+      popularContainer.innerHTML = gridHTML;
+    } else {
+      popularContainer.innerHTML = `<p class="text-gray-500 text-sm text-center py-8">Tidak ada mobil populer saat ini</p>`;
+    }
+  } catch (error) {
+    const popularContainer = document.querySelector(".popular-card-container");
+    if (popularContainer) {
+      popularContainer.innerHTML = `<p class="text-red-500 text-sm text-center py-8">Gagal memuat data mobil populer</p>`;
+    }
+  }
+}
 // Load semua mobil yang tersedia
+async function loadAvailableCars() {
+  try {
+    const data = await getData("/cars/popular?limit=10");
+    const availableContainer = document.querySelector(
+      ".available-card-container"
+    );
 
+    if (!availableContainer) return;
+
+    availableContainer.innerHTML = `<div class="text-gray-500 text-sm text-center py-8">Loading available cars...</div>`;
+
+    const carData =
+      data.data && Array.isArray(data.data)
+        ? data.data
+        : Array.isArray(data)
+        ? data
+        : [];
+
+    if (carData.length > 0) {
+      availableContainer.innerHTML = "";
+      carData.forEach((car) => {
+        availableContainer.innerHTML += createAvailableCarCard(car);
+      });
+    } else {
+      availableContainer.innerHTML = `<p class="text-gray-500 text-sm text-center py-8">Tidak ada mobil tersedia saat ini</p>`;
+    }
+  } catch (error) {
+    const availableContainer = document.querySelector(
+      ".available-card-container"
+    );
+    if (availableContainer) {
+      availableContainer.innerHTML = `<p class="text-red-500 text-sm text-center py-8">Gagal memuat data mobil tersedia</p>`;
+    }
+  }
+}
 
 // Pencarian mobil
 async function searchCars() {
