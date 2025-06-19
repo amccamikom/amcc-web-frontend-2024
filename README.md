@@ -1,5 +1,5 @@
 # Pertemuan 9 Web Programming Frontend
-Yow halo semuanya welcome back di pelatihan kita yang ke-5 ini yaa. Okey, jadi di pertemuan kali ini kita akan lanjutin kenalan nih sama Javacript asyncronous. Gasskeun🚀
+Yow halo semuanya welcome back di pelatihan kita yang ke-9 ini yaa. Okey, jadi di pertemuan kali ini kita akan lanjutin kenalan nih sama Javacript asyncronous. Gasskeun🚀
 
 ## Installasi
 
